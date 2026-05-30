@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/cart.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>ABC Fitness Studio</h1>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="community.html">Community</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+
+<button class="btn"
+onclick="viewCart()">
+View Shopping Cart
+</button>
+
+<h2>Fitness Equipment</h2>
+
+<table>
+
+<tr>
+<th>Image</th>
+<th>Product</th>
+<th>Description</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td><img src="images/yoga-mat.jpg" width="100"></td>
+<td>Yoga Mat</td>
+<td>Non-slip premium mat</td>
+<td>
+<button onclick="addToCart('Yoga Mat')">
+Add to Cart
+</button>
+</td>
+</tr>
+
+<tr>
+<td><img src="images/resistance-band.jpg" width="100"></td>
+<td>Resistance Bands</td>
+<td>Strength training bands</td>
+<td>
+<button onclick="addToCart('Resistance Bands')">
+Add to Cart
+</button>
+</td>
+</tr>
+
+<tr>
+<td><img src="images/dumbbells.jpg" width="100"></td>
+<td>Dumbbells</td>
+<td>5kg dumbbell set</td>
+<td>
+<button onclick="addToCart('Dumbbells')">
+Add to Cart
+</button>
+</td>
+</tr>
+
+<tr>
+<td><img src="images/exercise-ball.jpg" width="100"></td>
+<td>Exercise Ball</td>
+<td>Core training ball</td>
+<td>
+<button onclick="addToCart('Exercise Ball')">
+Add to Cart
+</button>
+</td>
+</tr>
+
+</table>
+
+</section>
+
+<div id="cartModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close"
+onclick="closeCart()">&times;</span>
+
+<h2>Your Cart</h2>
+
+<ul id="cartItems"></ul>
+
+<button onclick="clearCart()">
+Clear Cart
+</button>
+
+<button onclick="processOrder()">
+Process Order
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
