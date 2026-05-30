@@ -1,113 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Gallery</title>
-<link rel="stylesheet" href="css/styles.css">
-<script src="js/cart.js"></script>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/cart.js"></script>
 </head>
-
 <body>
 
 <header>
-<h1>ABC Fitness Studio</h1>
-
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="community.html">Community</a></li>
-</ul>
-</nav>
+    <h1>Gallery</h1>
+    <button onclick="viewCart()">View Cart</button>
 </header>
 
-<section>
+<section class="grid">
 
-<button class="btn"
-onclick="viewCart()">
-View Shopping Cart
-</button>
+<!-- 9 REQUIRED ITEMS -->
 
-<h2>Fitness Equipment</h2>
+<div class="card">
+<img src="images/individual-yoga.jpg">
+<h3>Individual Yoga</h3>
+<button onclick="addToCart('Individual Yoga')">Add</button>
+</div>
 
-<table>
+<div class="card">
+<img src="images/group-yoga.jpg">
+<h3>Group Yoga</h3>
+<button onclick="addToCart('Group Yoga')">Add</button>
+</div>
 
-<tr>
-<th>Image</th>
-<th>Product</th>
-<th>Description</th>
-<th>Action</th>
-</tr>
+<div class="card">
+<img src="images/individual-pilates.jpg">
+<h3>Individual Pilates</h3>
+<button onclick="addToCart('Individual Pilates')">Add</button>
+</div>
 
-<tr>
-<td><img src="images/yoga-mat.jpg" width="100"></td>
-<td>Yoga Mat</td>
-<td>Non-slip premium mat</td>
-<td>
-<button onclick="addToCart('Yoga Mat')">
-Add to Cart
-</button>
-</td>
-</tr>
+<div class="card">
+<img src="images/group-pilates.jpg">
+<h3>Group Pilates</h3>
+<button onclick="addToCart('Group Pilates')">Add</button>
+</div>
 
-<tr>
-<td><img src="images/resistance-band.jpg" width="100"></td>
-<td>Resistance Bands</td>
-<td>Strength training bands</td>
-<td>
-<button onclick="addToCart('Resistance Bands')">
-Add to Cart
-</button>
-</td>
-</tr>
+<div class="card">
+<img src="images/individual-kickboxing.jpg">
+<h3>Individual Kickboxing</h3>
+<button onclick="addToCart('Individual Kickboxing')">Add</button>
+</div>
 
-<tr>
-<td><img src="images/dumbbells.jpg" width="100"></td>
-<td>Dumbbells</td>
-<td>5kg dumbbell set</td>
-<td>
-<button onclick="addToCart('Dumbbells')">
-Add to Cart
-</button>
-</td>
-</tr>
+<div class="card">
+<img src="images/group-kickboxing.jpg">
+<h3>Group Kickboxing</h3>
+<button onclick="addToCart('Group Kickboxing')">Add</button>
+</div>
 
-<tr>
-<td><img src="images/exercise-ball.jpg" width="100"></td>
-<td>Exercise Ball</td>
-<td>Core training ball</td>
-<td>
-<button onclick="addToCart('Exercise Ball')">
-Add to Cart
-</button>
-</td>
-</tr>
+<div class="card">
+<img src="images/yoga-mat.jpg">
+<h3>Yoga Mat</h3>
+<button onclick="addToCart('Yoga Mat')">Add</button>
+</div>
 
-</table>
+<div class="card">
+<img src="images/water-bottle.jpg">
+<h3>Water Bottle</h3>
+<button onclick="addToCart('Water Bottle')">Add</button>
+</div>
+
+<div class="card">
+<img src="images/tee-shirt.jpg">
+<h3>Tee Shirt</h3>
+<button onclick="addToCart('Tee Shirt')">Add</button>
+</div>
 
 </section>
 
+<!-- CART MODAL -->
 <div id="cartModal" class="modal">
+    <div class="modal-content">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
 
-<div class="modal-content">
-
-<span class="close"
-onclick="closeCart()">&times;</span>
-
-<h2>Your Cart</h2>
-
-<ul id="cartItems"></ul>
-
-<button onclick="clearCart()">
-Clear Cart
-</button>
-
-<button onclick="processOrder()">
-Process Order
-</button>
-
-</div>
-
+        <button onclick="clearCart()">Clear</button>
+        <button onclick="processOrder()">Checkout</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
 </div>
 
 </body>
